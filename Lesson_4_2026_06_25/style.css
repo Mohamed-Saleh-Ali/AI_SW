@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  background-color: red;
+  color: navy;
+  overflow-x: hidden;
+}
+
+main,
+section {
+  padding: 0 2rem;
+  color: green;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+#color {
+  color: green;
+}
+
+#email {
+  color: red;
+}
+
+#font {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: red;
+}
+
+#background {
+  background-color: yellow;
+}
+
+#part1 {
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+  background-color: lightgray;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  background-color: lavender;
+  color: ;
+  background-color: beige;
+  overflow-x: hidden;
+}
+
+<header {
+  background-color: lightblue;
+  padding: 1rem;
+  text-align: center;
+}

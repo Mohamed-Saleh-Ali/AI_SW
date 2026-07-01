@@ -1,0 +1,75 @@
+<!-- basically to i am using the 
+ 1- Header    Y
+ 2- nav       Y
+ 3- main      Y
+ 4- article   
+ 5- section   Y
+ 6- aside     Y
+ 7- footer    Y
+ 8- figure       
+ _________________________________
+ -->
+
+<!-- Here i made the semantic version
+using the tags they tought us like main and section
+instead of just simple body 
+
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Semantic form</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Coding School Sign Up</h1>
+      <nav>
+          <ul><li><a href="#">Home</a></li></ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+          <h2>Join our bootcamps!</h2>
+            <!-- I used Form with input of NAME , email , telephone and select with 2 options of courses
+                   with submit button with sign up label 
+                   All of them required , used Fieldset for grouping-->          
+          <form>
+            <fieldset>
+              <legend>Candidate Info</legend>
+              
+              <label for="name">Name:</label>
+              <input type="text" id="name" required><br>
+
+              <label for="mail">Email:</label>
+              <input type="email" id="mail" required><br>
+
+              <label for="phone">Telephone:</label>
+              <input type="tel" id="phone" required><br>
+
+              <label for="bootcamp">Bootcamp:</label>
+              <select id="bootcamp" required>
+                 <option value="">-- choose --</option>
+                 <option value="web">Web Dev</option>
+                 <option value="data">Data</option>
+              </select><br><br>
+
+              <button type="submit">Submit</button>
+            </fieldset>
+          </form>
+      </section>
+
+      <aside>
+        <p>Why choose us? we are the best!</p>
+      </aside>
+
+    </main>
+
+    <footer>
+      <p>copyright 2026</p>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,112 @@
+/* ==============================================================
+   WINDOWS NOSTALGIA - CSS EXPLANATION
+   Step-by-step breakdown of how the classic Windows look is made.
+   ============================================================== */
+
+/* STEP 1: RESET AND FONT */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* STEP 2: THE DESKTOP BACKGROUND */
+body {
+  /* This creates the classic Windows 95/98 solid teal desktop color */
+  background-color: #008080; 
+  /* Flexbox is used here just to perfectly center the popup window on the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+1
+/* STEP 3: THE MAIN WINDOW BOX & 3D BORDER */
+.window {
+  /* Standard classic Windows gray background */
+  background-color: #c0c0c0; 
+  width: 600px;
+  padding: 10px;
+  
+  /* THE 3D TRICK: 
+     Before modern shadows existed, developers created 3D "raised" elements 
+     by making the Top and Left borders white (catching the light), 
+     and the Bottom and Right borders black (casting a shadow). */
+  border-top: 10px solid #ffffff;
+  border-left: 10px solid #ffffff;
+  border-right: 10px solid #000000;
+  border-bottom: 10px solid #000000;
+  
+  
+  /* To make the 3D effect even better, we add an inner shadow.
+     A dark gray shadow on the bottom right, and a light gray on the top left. */
+  box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+}
+
+/* STEP 4: THE BLUE TITLE BAR */
+.title-bar {
+  /* Using a linear gradient from dark blue to lighter blue */
+  background: linear-gradient(to right, #000080, #1084d0); 
+  background: linear-gradient(to right, #800064, #10d0d0); 
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 3px 5px; /* Tiny bit of padding to keep text off the edges */
+}
+
+/* STEP 5: THE INNER CONTENT AREA */
+.content {
+  padding: 20px; /* Space between the window edges and the text/buttons */
+}
+
+/* STEP 6: POSITIONING THE ICON AND TEXT */
+.message-area {
+  /* Flexbox aligns the Red X image and the text perfectly side-by-side */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* The gap between the image and the text */
+  margin-bottom: 25px; /* Pushes the Cancel button down */
+}
+
+.message-area p {
+  font-size: 14px;
+}
+
+/* STEP 7: POSITIONING THE BUTTON */
+.button-area {
+  /* Flexbox is used to push the Cancel button to the right side of the window */
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* STEP 8: THE 3D BUTTON */
+button {
+  background-color: #c0c0c0;
+  padding: 5px 25px;
+  font-size: 14px;
+  cursor: pointer;
+  
+  /* Notice this is the EXACT same 3D border trick used on the main window! */
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+}
+
+/* STEP 9: THE CLICK ANIMATION */
+button:active {
+  /* When the button is clicked (:active), we REVERSE the borders!
+     Black goes to Top/Left, White goes to Bottom/Right. 
+     This creates the optical illusion that the button was pressed inward! */
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px #808080;
+  
+  /* We shift the padding slightly so the text actually moves down and right 
+     when clicked, adding to the illusion. */
+  padding: 6px 24px 4px 26px; 
+}

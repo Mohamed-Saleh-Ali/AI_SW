@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Shop | Contact</title>
+    <link rel="stylesheet" href="../master_styles.css" />
+  </head>
+  <body>
+    <div id="sticky-header" class="flex-nav">
+      <h1 style="color: white; margin: 0;">Carl's Coffee</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="box-model-example">
+      <h1>Contact Us</h1>
+      <div class="grid-gallery" style="grid-template-columns: 1fr; margin-bottom: 20px;">
+        <img
+          src="https://images.pexels.com/photos/27860686/pexels-photo-27860686.jpeg"
+          alt="yummy coffee Cup"
+        />
+      </div>
+      
+      <ul>
+        <li>Email: <a href="mailto:info@x.xyz">info@x.xyz</a></li>
+        <li>Phone: <a href="tel:+491234567890">+49 xxx-xxx-xxxx</a></li>
+      </ul>
+
+      <h2 style="margin-top: 20px;">Send a Message</h2>
+      <form style="display: flex; flex-direction: column; gap: 10px;">
+        <label for="name">Name: </label> 
+        <input type="text" name="name" id="name" style="padding: 5px;">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" required style="padding: 5px;">
+        
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="4" style="padding: 5px;"></textarea>
+        
+        <button type="submit" style="padding: 6px 12px; background-color: #3498db; color: white; border: none; border-radius: 4px; align-self: flex-start;">Send</button>
+      </form>
+      
+      <p style="margin-top: 20px; font-size: 0.8rem; text-align: center;">&copy; 2026 MvM Munich. All rights reserved.</p>    
+    </div>
+  </body>
+</html>

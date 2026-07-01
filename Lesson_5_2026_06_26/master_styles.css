@@ -1,0 +1,138 @@
+/* ==============================================================
+   CSS CHEAT SHEET & MASTER STYLES 
+   This file covers the main concepts from Chapter 2!
+   ============================================================== */
+
+/* 1. SELECTORS & BASE TYPOGRAPHY (Fonts & Colors) */
+/* The universal selector (*) targets EVERY element. Good for resetting margins. */
+* {
+  margin: 10px;
+  padding: 0;
+  /* box-sizing: border-box ensures padding/borders don't increase the total width */
+  box-sizing: border-box; 
+  
+
+} 
+
+/*  Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 1000px) {
+  /* CSS rules for extra small screens */
+} 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  /* CSS rules for extra small screens */
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  /* CSS rules for small screens */
+}
+
+/* Medium devices (landscape tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* CSS rules for medium screens */
+}
+
+/* Large devices (laptops/desktops, 992px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  /* CSS rules for large screens */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1201px) {
+  /* CSS rules for extra large screens */
+}
+
+
+/* The element selector (body) targets the whole page body */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Fallback fonts! */
+  color: #333333; /* Dark gray text */
+  background-color: #f4f4f9; /* Light grayish-blue background */
+  line-height: 1.6; /* Adds breathing room between lines of text
+ 
+}
+
+/* Grouping selectors (h1, h2) applies styles to both */
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* 2. THE BOX MODEL (Margin, Padding, Border) */
+/* A class selector starts with a dot (.) */
+.box-model-example {
+  background-color: white;
+  padding: 20px; /* Space INSIDE the border */
+  margin: 20px auto; /* Auto centers the box horizontally! */
+  border: 2px solid #3498db; /* Size, Style, Color */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 800px; /* Won't grow larger than this */
+}
+
+/* 3. LAYOUT: FLEXBOX (Great for 1D layouts like Nav Bars) */
+.flex-nav {
+  display: flex; /* Turns this into a flex container */
+  justify-content: space-between; /* Pushes items to edges */
+  align-items: center; /* Centers items vertically */
+  background-color: #34495e;
+  padding: 15px 20px;
+  
+}
+
+.flex-nav ul {
+  display: flex; /* Flex inside a flex! Makes the list horizontal */
+  list-style: none; /* Removes bullet points */
+  gap: 20px; /* Space between flex items */
+}
+
+.flex-nav a {
+  color: white;
+  text-decoration: none; /* Removes underline from links */
+  font-weight: bold;
+}
+
+/* 4. LAYOUT: GRID (Great for 2D layouts like Photo Galleries) */
+.grid-gallery {
+  display: grid; /* Turns this into a grid container */
+  /* Creates 3 equal columns: 1fr 1fr 1fr */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px; /* Space between rows and columns */
+  margin-top: 20px;
+}
+
+.grid-gallery img {
+  width: 100%; /* Image takes full width of its grid cell */
+  height: 200px; /* Fixed height so they all match */
+  object-fit: cover; /* Prevents image from stretching ugly */
+  border-radius: 5px;
+}
+
+/* 5. POSITIONING (Sticky headers) */
+/* ID selector starts with a hash (#). Sticky keeps it at the top when scrolling */
+#sticky-header {
+  position: sticky;
+  top: 0; /* Sticks to the very top */
+  z-index: 10; /* Ensures it stays ON TOP of other scrolling elements */
+}
+
+/* 6. RESPONSIVE DESIGN (Media Queries for Mobile Devices) */
+/* If the screen is 768px or SMALLER, apply these styles to override the ones above */
+@media (max-width: 768px) {
+  
+  .flex-nav {
+    flex-direction: column; /* Stacks the nav bar vertically on mobile! */
+    align-items: flex-start;
+  }
+  
+  .flex-nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .grid-gallery {
+    /* Changes grid from 3 columns to 1 column on small screens */
+    grid-template-columns: 1fr; 
+  }
+}
